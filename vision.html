@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h1>Vision</h1>
+<h1>Home</h1>
 <body>
 <style>
 body {
@@ -17,27 +17,120 @@ p {
   font-size: 18px;
 }
 
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
   cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.footer {
+    margin: auto;
+    width: 100px;
+    text-align:center;
+    padding:10px;
+    color:#ffffff;
 }
 </style>
 
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
-<p style="text-align: justify;">Madison Blackstone is a director of brand marketing, with experience managing global teams 
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="aboutus.html">About</a>
+  <a href="vision.html">Vision</a>
+  <a href="#">Contact</a>
+  <a href="#">Services</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+  <p>Madison Blackstone is a director of brand marketing, with experience managing global teams 
 and multi-million-dollar campaigns. Her background in brand strategy, visual design, and account management inform her mindful 
 but competitive approach.</p>
+</div>
 
-
+<img src="addis-ababa-1024x678.jpg" alt="addis-ababa" class="center">
 
 
 <p>Madison is fueled by her passion for understanding the nuances of cross-cultural advertising. 
@@ -49,12 +142,11 @@ Meanwhile, she vastly improved the productivity of her team by implementing stra
  a work-life balance for her department. Madison believes mindfulness in the workplace is key to success - a tenet she lives 
  out through her interests in yoga, meditation, gardening, and painting. Madison is currently working as a freelance 
  marketing director and is always interested in a challenge. Reach out to madisonblackstone@gmail.com to connect!</p>
+<footer>
+    <div class="footer">
+    2021
+    </div>
+<footer>
 
-<a href="index.html" class="button">Home</a>
-<a href="aboutus.html" class="button">About us</a>
-<a href="vision.html" class="button">Vision</a>
-<div class="footer">
-  <p>2021</p>
-</div>
 </body>
 </html>
