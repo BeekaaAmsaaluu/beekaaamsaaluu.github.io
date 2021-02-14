@@ -102,6 +102,17 @@ p {
 }
 </style>
 
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -114,11 +125,10 @@ p {
 <div id="main">
   <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
   <h2>Collapsed Sidebar</h2>
-  <p>Content...</p>
-</div>
-<p style="text-align: justify;">Madison Blackstone is a director of brand marketing, with experience managing global teams 
+  <p>style="text-align: justify;">Madison Blackstone is a director of brand marketing, with experience managing global teams 
 and multi-million-dollar campaigns. Her background in brand strategy, visual design, and account management inform her mindful 
 but competitive approach.</p>
+</div>
 
 <img src="addis-ababa-1024x678.jpg" alt="addis-ababa" class="center">
 
